@@ -72,7 +72,9 @@ void solve(int boardSize, int xMisisng, int yMissing, int curX, int curY, int cu
     }
 
     
-    /***** Divide and conquer below here *****/
+    /* 
+     * Divide and conquer below here
+    */
     //check for missing square, and if there is none, put one there
     trominoNum++;
 	int halfSize=curSize/2,xCenter,yCenter;
@@ -82,7 +84,6 @@ void solve(int boardSize, int xMisisng, int yMissing, int curX, int curY, int cu
 	tilePoint[0] = xCenter;
 	tilePoint[1] = yCenter;
 	
-	//TODO Add pringting tile here
 	if(xMisisng <xCenter && yMissing< yCenter){ // checking that hole in the first quad, if yes than put solve in center opposite quad.
 		board[xCenter-1][yCenter]= trominoNum;
 		board[xCenter][yCenter-1]= trominoNum;
